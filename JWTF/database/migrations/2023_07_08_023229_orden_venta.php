@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        schema::create('relacionestaciones', function (Blueprint $table){
+        schema::create('orden_venta',function (Blueprint $table){
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->integer('estacion_id');
-            $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->boolean('tipo');
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        schema::dropDatabaseIfExists('relacionestaciones');
+        //
     }
 };
