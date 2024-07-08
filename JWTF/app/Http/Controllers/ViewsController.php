@@ -10,4 +10,8 @@ class ViewsController extends Controller
     {
         return view('index');
     }
+
+    public function Login() {
+        return view('login');
+    }
 }

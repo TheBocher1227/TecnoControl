@@ -14,9 +14,10 @@ use App\Http\Controllers\ViewsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('index',[ViewsController::class,'Index']);
+Route::get('/',[ViewsController::class,'Index']);
+Route::get('/login',[ViewsController::class,'Login']);
